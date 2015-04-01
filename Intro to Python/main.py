@@ -59,13 +59,17 @@ while i<9:
     print "The count is ",i
     i = i+1
 '''
-#For loop
+#For loop count in between numbers
 '''
 for i in range(0,10):
     print "The count is ",i
     i = i+1
 '''
-
+#"For Each Loop"
+# Good for objects and arrays.
+rappers = ["2-Pac","Ice Cube","Ice Tee","Beastie Boys"]
+for r in rappers:
+    print r
 
 
 
