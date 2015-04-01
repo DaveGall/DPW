@@ -18,7 +18,19 @@ last_name = "Gall"
 birth_year = 1974
 current_year = 2015
 age = current_year - birth_year
-print "You are "+str(age)+" years old."
+#print "You are "+str(age)+" years old."
 #no increment or decrement in python: e.g. ++ --
 
 #Objects of different type str(var) to change to a string, int(var) to change to a number.
+'''
+Javascript:
+if(condition){
+//stuff to do
+}
+Below is an if statement form in python- no parens or brackets. The indent tells python what is
+in the statement.
+'''
+budget = 150
+if budget > 100:
+    brand = "Nike"
+    print "I can buy some "+brand+"'s"
