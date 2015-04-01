@@ -7,4 +7,7 @@ Doc Strings, multiple lines of comments.
 first_name = "Dave"
 last_name = "Gall"
 #Python 3.0 uses parenthesis not a space like 2.7
-print first_name
+#print first_name
+
+response = raw_input("Enter your name  ")
+print response
