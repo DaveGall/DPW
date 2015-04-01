@@ -30,7 +30,9 @@ if(condition){
 Below is an if statement form in python- no parens or brackets. The indent tells python what is
 in the statement.
 '''
-budget = 150
+budget = 10
 if budget > 100:
     brand = "Nike"
     print "I can buy some "+brand+"'s"
+else:
+    print "No cool shoes for me."
