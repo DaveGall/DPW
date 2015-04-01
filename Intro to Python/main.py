@@ -30,9 +30,23 @@ if(condition){
 Below is an if statement form in python- no parens or brackets. The indent tells python what is
 in the statement.
 '''
-budget = 10
+budget = 60
 if budget > 100:
     brand = "Nike"
-    print "I can buy some "+brand+"'s"
+    #print "I can buy some "+brand+"'s"
+elif budget > 50:#else if is spelled just elif in python.
+    #print "We can at least get some decent shoes."
+    pass
 else:
-    print "No cool shoes for me."
+    pass
+    #print "No cool shoes for me." pass is something you can put in to skip parts of some code so there is no error.
+
+#aarays in python
+characters = ["leia","luke","chewy","hans"]
+characters.append("lando")
+#print characters
+
+#dictionary
+movies = dict() #creates dictionary object for you.
+movies = {"Start Wars":"Darth Vader", "Silence of the Lambs":"Hannibal Lecter"}
+print movies["Start Wars"]
