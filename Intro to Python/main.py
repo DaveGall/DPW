@@ -9,5 +9,16 @@ last_name = "Gall"
 #Python 3.0 uses parenthesis not a space like 2.7
 #print first_name
 
-response = raw_input("Enter your name  ")
-print response
+#raw_input collects input as strings.
+#response = raw_input("Enter your name  ")
+#print "Hello there, ", response
+
+#Expressions
+
+birth_year = 1974
+current_year = 2015
+age = current_year - birth_year
+print "You are "+str(age)+" years old."
+#no increment or decrement in python: e.g. ++ --
+
+#Objects of different type str(var) to change to a string, int(var) to change to a number.
