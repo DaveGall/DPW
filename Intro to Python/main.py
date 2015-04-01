@@ -81,6 +81,23 @@ def calcArea(h,w):
 a = calcArea(6,8)
 #print "My area is "+str(a)+"sqft"
 
+#Strings into larger strings
+
+title = "Contact Us"
+body = "Please don't contact us as we will be unable to come to the phone, sorry."
+message = '''
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>{title}</title>
+    </head>
+    <body>
+        {body}
+    </body>
+</html>
+'''
+message = message.format(**locals())
+print message
 
 
 
