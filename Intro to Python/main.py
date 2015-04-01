@@ -49,4 +49,24 @@ characters.append("lando")
 #dictionary
 movies = dict() #creates dictionary object for you.
 movies = {"Start Wars":"Darth Vader", "Silence of the Lambs":"Hannibal Lecter"}
-print movies["Start Wars"]
+#print movies["Start Wars"]
+
+#loops
+#While loops
+'''
+i = 0
+while i<9:
+    print "The count is ",i
+    i = i+1
+'''
+#For loop
+'''
+for i in range(0,10):
+    print "The count is ",i
+    i = i+1
+'''
+
+
+
+
+
