@@ -48,19 +48,25 @@ friends = [person_name1,person_name2,person_name3]
 
 #Friends array ends here
 #Conditional statements Begin
-if cond1 == "y" or cond1 == "Y":
-    sports = "You will also be traveling with your favorite sports team!!"
-    print sports
-else:
-    band = "You will be traveling with your favorite musical group!!"
-    print band
+def company():
+    if cond1 == "y" or cond1 == "Y":
+        result = "sports team!!"
+        print result
+    else:
+        result = "musical group!!"
+        print result
 
-if cond2 == "y" or cond2 == "Y":
-    apples = " bushels of apples "
-    print apples
-else:
-    strawberries = " flats of strawberries "
-    print strawberries
+    return result
+
+def prize(cond2):
+    if cond2 == "y" or cond2 == "Y":
+        results = " bushels of apples "
+        print results
+    else:
+        results = " flats of strawberries "
+        print results
+
+    return results
 #Conditional statements End
 #dictionary statement begin
 meal_options = {"Meat":"Chicken with Rice","Veg":"Toficken with Rice","Vegan":"Water"}
@@ -69,9 +75,9 @@ meal_options = {"Meat":"Chicken with Rice","Veg":"Toficken with Rice","Vegan":"W
 
 
 
-print name+", your challenge is as follows: you are going to be left on a "+verb+" island in the middle of "+favorite_meal+". You will be presented with "+str(number1)+" challenges and you will have "+str(added)+" hours to complete these tasks before you. "
+print name+", your challenge is as follows: you are going to be left on a "+verb+" island in the middle of "+favorite_meal+". You will be presented with "+str(number1)+" challenges and you will have "+str(added)+" hours to complete these tasks before you. You will be allowed to carry a "+kitchen_utensil+" with you at all times but nothing more. Just so you know "+name+", you have made "+str(mult)+" people very happy today. So for your jorney today you will be traveling by way of "+favorite_animal+" to "+verb+" island in the middle of "+favorite_meal+". "+name+", you should get there in about "+str(mult)+" days. We will provide you with meal options for your travel meal. They are as follows: "+meal_options['Meat']+", "+meal_options['Veg']+" or "+meal_options['Vegan']+". During your travel you will be accompanied by your favorite "+company()+". "
 
-#print name+", "+"your challenge will be as follows: you are going to be left on a "+ verb+" island in the middle of "+ favorite_meal+". You will be presented with "+number1+ " challenges and you will have "+ str(added)+" hours to complete these tasks before you. You will be allowed to carry a "+ kitchen_utensil+" with you at all times but nothing more. Just so you know "+ name+", you have made "+str(mult)+ " people happy today. So for your journey today you will be traveling in your very own  "+favorite_animal+" to "+ verb+" island in the middle of "+favorite_meal+". "+name+", you should get there in about "+number2*number1+" days. We will provide you with multiple options for your travel meal. They are as follows: "+meal_options['Meat']+", "+meal_options['Veg']+" or "+meal_options['Vegan']+". During your travel you will be accompanied by "+cond1+". You may also take "+friends+" along to pass the time until you get to your destination. For the record "+name+", your friends look a little "+adjective+" to me, yikes. One more thing before we send you off on your adventure, if you do not complete these tasks in "+str(added)+" hours you will still win "+str(mult2)+" flaming "+adjective+" chilies!!  However, if you complete your challenge you are going home with "+number3+" "+cond2+ "for you and your family. Well "+name+" good luck and it is time for you to head off on your journey. Folks let us give "+name+" a proper countdown "+while_loop+", see ya!!"
+#+". During your travel you will be accompanied by "+cond1+". You may also take "+friends+" along to pass the time until you get to your destination. For the record "+name+", your friends look a little "+adjective+" to me, yikes. One more thing before we send you off on your adventure, if you do not complete these tasks in "+str(added)+" hours you will still win "+str(mult2)+" flaming "+adjective+" chilies!!  However, if you complete your challenge you are going home with "+number3+" "+cond2+ "for you and your family. Well "+name+" good luck and it is time for you to head off on your journey. Folks let us give "+name+" a proper countdown "+while_loop+", see ya!!"
 
 
 
