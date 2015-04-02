@@ -38,7 +38,7 @@ print number1+" * "+number2+" is: "+str(mult)+". "+number3+" + "+number2+" is: "
 #End number function variables
 #While loop begins
 i=5
-while i>=0:
+while i>0:
     print i
     i = i-1
 #While loop ends.
@@ -55,9 +55,17 @@ else:
     band = "You will be traveling with your favorite musical group!!"
     print band
 
-
-
+if cond2 == "y" or cond2 == "Y":
+    apples = " bushels of apples "
+    print apples
+else:
+    strawberries = " flats of strawberries "
+    print strawberries
 #Conditional statements End
+#dictionary statement begin
+meal_options = {"Meat":"Chicken with Rice","Veg":"Toficken with Rice","Vegan":"Water"}
+print meal_options["Meat"]+", "+meal_options["Veg"]+" or "+meal_options["Vegan"]
+#dictionary statement end
 
 
 
