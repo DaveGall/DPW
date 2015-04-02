@@ -32,8 +32,8 @@ def numberAdd(a,b):
 #Number functions use is here.
 mult = numberMultiply(number1,number2)
 added = numberAdd(number3,number2)
-
-print number1+" * "+number2+" is: "+str(mult)+". "+number3+" + "+number2+" is: "+str(added)
+mult2 = numberMultiply(number1,number3)
+#print number1+" * "+number2+" is: "+str(mult)+". "+number3+" + "+number2+" is: "+str(added)
 
 #End number function variables
 #While loop begins
@@ -44,7 +44,7 @@ while i>0:
 #While loop ends.
 #Friends array begins here
 friends = [person_name1,person_name2,person_name3]
-print "Your friends "+friends[0]+", "+friends[1]+" and "+friends[2]+", will be joining us for dinner."
+#print "Your friends "+friends[0]+", "+friends[1]+" and "+friends[2]+", will be joining us for dinner."
 
 #Friends array ends here
 #Conditional statements Begin
@@ -64,8 +64,33 @@ else:
 #Conditional statements End
 #dictionary statement begin
 meal_options = {"Meat":"Chicken with Rice","Veg":"Toficken with Rice","Vegan":"Water"}
-print meal_options["Meat"]+", "+meal_options["Veg"]+" or "+meal_options["Vegan"]
+#print meal_options["Meat"]+", "+meal_options["Veg"]+" or "+meal_options["Vegan"]
 #dictionary statement end
+
+
+
+print name+", your challenge is as follows: you are going to be left on a "+verb+" island in the middle of "+favorite_meal+". You will be presented with "+str(number1)+" challenges and you will have "+str(added)+" hours to complete these tasks before you. "
+
+#print name+", "+"your challenge will be as follows: you are going to be left on a "+ verb+" island in the middle of "+ favorite_meal+". You will be presented with "+number1+ " challenges and you will have "+ str(added)+" hours to complete these tasks before you. You will be allowed to carry a "+ kitchen_utensil+" with you at all times but nothing more. Just so you know "+ name+", you have made "+str(mult)+ " people happy today. So for your journey today you will be traveling in your very own  "+favorite_animal+" to "+ verb+" island in the middle of "+favorite_meal+". "+name+", you should get there in about "+number2*number1+" days. We will provide you with multiple options for your travel meal. They are as follows: "+meal_options['Meat']+", "+meal_options['Veg']+" or "+meal_options['Vegan']+". During your travel you will be accompanied by "+cond1+". You may also take "+friends+" along to pass the time until you get to your destination. For the record "+name+", your friends look a little "+adjective+" to me, yikes. One more thing before we send you off on your adventure, if you do not complete these tasks in "+str(added)+" hours you will still win "+str(mult2)+" flaming "+adjective+" chilies!!  However, if you complete your challenge you are going home with "+number3+" "+cond2+ "for you and your family. Well "+name+" good luck and it is time for you to head off on your journey. Folks let us give "+name+" a proper countdown "+while_loop+", see ya!!"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
