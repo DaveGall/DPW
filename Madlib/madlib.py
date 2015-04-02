@@ -10,3 +10,8 @@ adjective = raw_input("Name a great adjective? ")
 person_name1 = raw_input("Give me a persons name? ")# Names will be part of the array.
 person_name2 = raw_input("Give me another persons name? ")
 person_name3 = raw_input("Give me just one more persons name? ")
+number1 = raw_input("Please give me a number between 1-10? ")
+number2 = raw_input("What is your favorite number? ")
+number3 = raw_input("How many people are there in your immediate family? ")
+
+print name+", "+favorite_meal+", "+kitchen_utensil+", "+verb+", "+favorite_animal+", "+slimy+", "+adjective+", "+person_name1+", "+person_name2+", "+person_name3+", "+number1+", "+number2+", "+number3+"."
