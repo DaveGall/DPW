@@ -33,19 +33,16 @@ def numberAdd(a,b):
 mult = numberMultiply(number1,number2)
 added = numberAdd(number3,number2)
 mult2 = numberMultiply(number1,number3)
-#print number1+" * "+number2+" is: "+str(mult)+". "+number3+" + "+number2+" is: "+str(added)
-
 #End number function variables
 #While loop begins
 i=5
 while i>0:
     print i
-    i = i-1
+    i-=1
+
 #While loop ends.
 #Friends array begins here
 friends = [person_name1,person_name2,person_name3]
-#print "Your friends "+friends[0]+", "+friends[1]+" and "+friends[2]+", will be joining us for dinner."
-
 #Friends array ends here
 #Conditional statements Begin
 def company():
@@ -58,26 +55,30 @@ def company():
 
     return result
 
-def prize(cond2):
+def prize():
     if cond2 == "y" or cond2 == "Y":
-        results = " bushels of apples "
+        results = "bushels of apples"
         print results
     else:
-        results = " flats of strawberries "
+        results = "flats of strawberries"
         print results
 
     return results
 #Conditional statements End
 #dictionary statement begin
 meal_options = {"Meat":"Chicken with Rice","Veg":"Toficken with Rice","Vegan":"Water"}
-#print meal_options["Meat"]+", "+meal_options["Veg"]+" or "+meal_options["Vegan"]
 #dictionary statement end
 
 
+#Story begins here.
+print "\033[1m"+name+"\033[0m"+", your challenge is as follows: \nyou are going to be left on a "+"\033[1m"+verb+"\033[0m"+" island in the middle of "+"\033[1m"+favorite_meal+"\033[0m"+". You will be presented with "+"\033[1m"+str(number1)+"\033[0m"+" challenges and you will have "+"\033[1m"+str(added)+"\033[0m"+" hours to complete these tasks before you. \nYou will be allowed to carry a "+"\033[1m"+kitchen_utensil+"\033[0m"+" with you at all times but nothing more. Just so you know "+"\033[1m"+name+"\033[0m"+", you have made "+"\033[1m"+str(mult)+"\033[0m"+" people very happy today. \nSo for your journey today you will be traveling by way of "+"\033[1m"+favorite_animal+"\033[0m"+" to "+"\033[1m"+verb+"\033[0m"+" island in the middle of "+"\033[1m"+favorite_meal+"\033[0m"+". "+"\033[1m"+name+"\033[0m"+", you should get there in about "+"\033[1m"+str(mult2)+"\033[0m"+" days. We will provide you with a meal in route. Your options are as follows: "+"\033[1m"+meal_options['Meat']+"\033[0m"+", "+"\033[1m"+meal_options['Veg']+"\033[0m"+" or "+"\033[1m"+meal_options['Vegan']+"\033[0m"+". \nDuring your travel you will be accompanied by your favorite "+"\033[1m"+company()+"\033[0m"+". You may also take your friends "+"\033[1m"+friends[0]+"\033[0m"+", "+"\033[1m"+friends[1]+"\033[0m"+" and "+"\033[1m"+friends[2]+"\033[0m"+" along to pass the time until you get to your destination. For the record "+"\033[1m"+name+"\033[0m"+", your friends look a little "+"\033[1m"+adjective+"\033[0m"+" to me, yikes. \nOne more thing before we send you off on your adventure, the stakes. If you do not complete these tasks in "+"\033[1m"+str(added)+"\033[0m"+" hours you will go home with "+"\033[1m"+str(mult2)+"\033[0m"+" flaming "+"\033[1m"+adjective+"\033[0m"+" chillies!! However, if you complete the challenge you are going home with "+"\033[1m"+str(number3)+"\033[0m"+" "+"\033[1m"+prize()+"\033[0m"+" for you and your family. Well "+"\033[1m"+name+"\033[0m"+", good luck and it's time for you to head off on your journey. \nFolks let's give "+"\033[1m"+name+"\033[0m"+" a proper countdown: "
 
-print name+", your challenge is as follows: you are going to be left on a "+verb+" island in the middle of "+favorite_meal+". You will be presented with "+str(number1)+" challenges and you will have "+str(added)+" hours to complete these tasks before you. You will be allowed to carry a "+kitchen_utensil+" with you at all times but nothing more. Just so you know "+name+", you have made "+str(mult)+" people very happy today. So for your jorney today you will be traveling by way of "+favorite_animal+" to "+verb+" island in the middle of "+favorite_meal+". "+name+", you should get there in about "+str(mult)+" days. We will provide you with meal options for your travel meal. They are as follows: "+meal_options['Meat']+", "+meal_options['Veg']+" or "+meal_options['Vegan']+". During your travel you will be accompanied by your favorite "+company()+". "
+i=5
+while i>0:
+    print i,"..."
+    i-=1
 
-#+". During your travel you will be accompanied by "+cond1+". You may also take "+friends+" along to pass the time until you get to your destination. For the record "+name+", your friends look a little "+adjective+" to me, yikes. One more thing before we send you off on your adventure, if you do not complete these tasks in "+str(added)+" hours you will still win "+str(mult2)+" flaming "+adjective+" chilies!!  However, if you complete your challenge you are going home with "+number3+" "+cond2+ "for you and your family. Well "+name+" good luck and it is time for you to head off on your journey. Folks let us give "+name+" a proper countdown "+while_loop+", see ya!!"
+print "See Ya!!"
 
 
 
