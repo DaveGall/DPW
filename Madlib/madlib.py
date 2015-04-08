@@ -29,10 +29,11 @@ cond2 = raw_input("Do you like apples? y/n?")
 
 #---------------Section 2--------------------
 #number functions start
+#This first function will collect two sets of data(numbers) and multiply them together. It will pull from the numbers that are input in the number1,2 and 3 spot by the user.
 def numberMultiply(a,b):
     times = int(a)*int(b)
     return times
-
+#This second function will collect two sets of data(numbers) and add them together.
 def numberAdd(a,b):
     add = int(a)+int(b)
     return add
@@ -40,18 +41,19 @@ def numberAdd(a,b):
 #begin number function variables
 
 #Number functions use is here.
-mult = numberMultiply(number1,number2)
-added = numberAdd(number3,number2)
-mult2 = numberMultiply(number1,number3)
+mult = numberMultiply(number1,number2) #This number will return a result of multiplying numbers 1 and 2 through the first function. It uses numbers collected from the user in the number1 and number2 spot and runs them through the function and gives us and answer that we can inject into our print results.
+added = numberAdd(number3,number2)#This variable will grab number3 and number2 and run them through the numberAdd function and return a result that we can then apply to our story.
+mult2 = numberMultiply(number1,number3)#This variable will again use the multiply function to times two of the numbers given by the user to create a number that we can place in our code.
 #End number function variables
 
 #--------------------Section 3-----------------------
-#Friends array begins here
+#Friends array begins here. The names that go into this array will come from the input of the user as they type in a persons name for person_name 1,2 and 3. They will then be put into the code as friends that they can take along on their journey.
 friends = [person_name1,person_name2,person_name3]
 #Friends array ends here
 
 #--------------------Section 4----------------------
 #Conditional statements Begin
+#This first conditional statement takes the users input and looks to see if it is a 'y' or 'Y'. If it is it will run the first result of 'sports team'. If it does not find one of those two variations of y then it will give the result of 'musical group'. This will be placed in the story as a group you get to take along on your trip. 
 def company():
     if cond1 == "y" or cond1 == "Y":
         result = "sports team!!"
