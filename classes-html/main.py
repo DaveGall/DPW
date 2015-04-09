@@ -10,6 +10,7 @@ from pages import Page #From the page file import the Page class. Connects the t
 class MainHandler(webapp2.RequestHandler):
     def get(self):
         p = Page()
+        p.body = "Dave, you are awesome!!"
         self.response.write(p.print_out())
 
 
