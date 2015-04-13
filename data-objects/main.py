@@ -29,6 +29,7 @@ class MainHandler(webapp2.RequestHandler):
         yoda.home_planet = "Dagobah"
 
         chars = [luke, leia, yoda]
+        print rover.name
         print chars[0].profession+", "+chars[0].home_planet
         print chars[1].profession+", "+chars[1].home_planet
 
@@ -38,6 +39,10 @@ class Character(object):
         self.profession = ""
         self.age = 0
         self.home_planet = ""
+
+
+
+
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler)
