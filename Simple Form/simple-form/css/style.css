@@ -6,36 +6,36 @@ Simple Form CSS
 */
 
 body {
-    background: aqua;
+    background: aqua;/*This gives the background the color that I want*/
 }
 
-#form_container {
-    width: 400px;
-    margin: 40px auto;
-    overflow: hidden;
+#form_container {/*Styles the form container*/
+    width: 400px;/*Gives it a width of 400 pixels*/
+    margin: 40px auto;/*Top and bottom margin of 40 and centers the sides*/
+    overflow: hidden;/*Makes sure everything fits inside the container*/
 }
 
-.discount {
+.discount {/*Keeps the radials on the same line*/
     display: inline;
 }
 
 #yes {
-    margin-right: 20px;
+    margin-right: 20px;/*This gives a 20 pixel margin to the right of the yes radial so there is proper spacing.*/
 }
 
 label, select, #button {
-    display: block;
+    display: block;/*This sets the display for the labels, select and the button to be block which will put them in a stack look instead of a linear view.*/
 }
-#button {
-    background-color: lime;
-    float: right;
-    margin: 40px 10px 20px 0;
-    border-radius: 5px;
+#button {/*This section styles my button*/
+    background-color: lime;/*This sets the main background of my button to lime green*/
+    float: right;/*This floats the button to the right since eyes flow naturally from left to right it is the best place to put the button*/
+    margin: 40px 10px 20px 0;/*This sets the margins of the button to 40 pixels from the bottom of the radials, 10 pixels from the right side of the container, 20 pixels from the bottom of the container and zero pixels from the left because we have it floated to the right so that doesnt make a difference.*/
+    border-radius: 5px;/*This gives the corners a nice rounded edge to look more pleasing*/
 }
-#button:hover {
-    background-color: blue;
-    color: #ffffff;
+#button:hover {/*This section marks out the hover effect for the button*/
+    background-color: blue;/*This changes the background from lime green to a pretty blue*/
+    color: #ffffff;/*This changes the font color to white instead of black. Not only is the text more visible but it is extra confirmation to the user that they are indeed over the button.*/
 }
 input {
-    margin-bottom: 20px;
+    margin-bottom: 20px;/*This just gives the input fields 20 pixels of spacing from the bottom.*/
 }
