@@ -126,30 +126,30 @@ class Page(object):#This line starts the Page class which holds all the attribut
         end = self.page_close#This line takes the page_close and creates a variable named end
         return end#This returns that end variable for use in the code when needed.
 
-    def result_body(self):
+    def result_body(self):#This begins the attributes that we will use after the user has typed in their information.
         self.finished_body = '''
         <div id="form_container">'''
-        fb = self.finished_body
-        return fb
+        fb = self.finished_body#This takes the opening div tag section and puts it into a tidy variable
+        return fb#This returns that variable for use later in the code.
 
-    def dis_person(self):
+    def dis_person(self):#This is not gangster, I was shortening display but did not realize what it came out like until now. This will display the sentence prior to the users name being displayed.
         self.person = '''<p>Thank you for your order: '''
-        np = self.person
-        return np
+        np = self.person#This takes that person and puts it into a variable for later use.
+        return np#This returns our little sentence into reusable code.
 
-    def house(self):
+    def house(self):#This begins the section that will display just above the address to let the user know where their order is going.
         self.add = '''</p><p>Your order will be shipped to: </p>'''
-        home = self.add
-        return home
+        home = self.add#This puts that sentence into a nice little variable
+        return home#This line helps return our sentence so that it may be placed in our string for display purposes.
 
-    def savings(self):
+    def savings(self):#This begins the section that will display on the same line as the answer to whether or not the person wants to receive coupons.
         self.coup = '''<p>Would you like to receive coupons? '''
-        email_savings = self.coup
-        return email_savings
+        email_savings = self.coup#This line places that sentence into a tidy variable
+        return email_savings#This line returns that variable for use in the string when we display the users information.
 
-    def add_ending(self):
+    def add_ending(self):#This is just a closing paragraph tag. I wanted the answer to the yes or no question to be displayed on the same line as the question so I put the closing tag in a separate attribute.
         ending = '''</p>'''
-        return ending
+        return ending#This returns the tag for use in the results after the user inputs their information.
 
 
 
