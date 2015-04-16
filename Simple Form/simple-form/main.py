@@ -9,8 +9,8 @@ import webapp2
 class MainHandler(webapp2.RequestHandler):
     def get(self):
         self.response.write('Hello world!')
-        p=Page()
-        self.response.write(p.print_out())
+        display=Page()
+        self.response.write(display.web_page())
 
 class Page(object):
     def __init__(self):
@@ -24,12 +24,16 @@ class Page(object):
     </head>
     <body>
         '''
-        self.page_body = 'Just getting everything set up.'
-        self.page_close = '''
+        self.page_body = '''<form method="GET">
+        <label>Name:</label><input type="text" name="user_name"/>
+        <label>Address:</label><input type="text" name="address"/>
+        <label>City:</label><input type="text" name="city"
+        '''
+        self.page_close = '''</form>
     </body>
 </html>
         '''
-    def print_out(self):
+    def web_page(self):
         all = self.page_head+self.page_body+self.page_close
         all = all.format(**locals())
         return all
