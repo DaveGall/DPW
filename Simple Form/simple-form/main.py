@@ -24,12 +24,13 @@ class Page(object):
     </head>
     <body>
         '''
-        self.page_body = '''<form method="GET">
-        <label>Name:</label><input type="text" name="user_name"/>
-        <label>Address:</label><input type="text" name="address"/>
-        <label>City:</label><input type="text" name="city"
-        <label>State</label>
-        <select name="state">
+        self.page_body = '''<div id="form_container">
+        <form method="GET">
+        <label for="name">Name:</label><input id="name" type="text" name="user_name"/>
+        <label for="address" >Address:</label><input id="address" type="text" name="address"/>
+        <label for="city">City:</label><input id="city" type="text" name="city"
+        <label class="state_label" for="state">State:</label>
+        <select id="state" name="state" value="state">
             <option>Alabama</option>
             <option>Alaska</option>
             <option>Arizona</option>
@@ -82,7 +83,7 @@ class Page(object):
             <option>Wyoming</option>
         </select>
         '''
-        self.page_close = '''</form>
+        self.page_close = '''</form></div>
     </body>
 </html>
         '''

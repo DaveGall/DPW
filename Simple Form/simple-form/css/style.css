@@ -8,3 +8,17 @@ Simple Form CSS
 body {
     background: aqua;
 }
+
+#form_container {
+    width: 400px;
+    border: 1px solid #000000;
+    margin: auto;
+}
+
+label, select, .state_label {
+    display: block;
+}
+
+input {
+    margin-bottom: 20px;
+}
