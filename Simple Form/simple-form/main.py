@@ -10,22 +10,30 @@ class MainHandler(webapp2.RequestHandler):
     def get(self):
         self.response.write('Hello world!')
         p=Page()
-        self.response.write(p.page_head+p.page_body+p.page_close)
+        self.response.write(p.print_out())
 
 class Page(object):
-        page_head = '''
+    def __init__(self):
+        self.css = "css/style.css"
+        self.page_head = '''
 <!DOCTYPE HTML>
 <html>
     <head>
         <title>My Simple Form</title>
+        <link href="{self.css}" rel="stylesheet" type="text/css" />
     </head>
     <body>
         '''
-        page_body = 'Just getting everything set up.'
-        page_close = '''
+        self.page_body = 'Just getting everything set up.'
+        self.page_close = '''
     </body>
 </html>
         '''
+    def print_out(self):
+        all = self.page_head+self.page_body+self.page_close
+        all = all.format(**locals())
+        return all
+
 
 
 
