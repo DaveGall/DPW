@@ -10,6 +10,7 @@ class MainHandler(webapp2.RequestHandler):
     def get(self):
         self.response.write('Hello world!')
         display = Page()
+        #styling = display.head().format(**locals())
         self.response.write(display.head()+display.body()+display.close())
 
 
@@ -29,7 +30,9 @@ class Page(object):
     <body>
         '''
         top = self.page_head
+        top = top.format(**locals())
         return top
+
 
     def body(self):
         self.page_body = '''<div id="form_container">
