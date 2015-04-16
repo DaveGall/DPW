@@ -28,7 +28,7 @@ class Page(object):
         <form method="GET">
         <label for="name">Name:</label><input id="name" type="text" name="user_name"/>
         <label for="address" >Address:</label><input id="address" type="text" name="address"/>
-        <label for="city">City:</label><input id="city" type="text" name="city"
+        <label for="city">City:</label><input id="city" type="text" name="city"/>
         <label class="state_label" for="state">State:</label>
         <select id="state" name="state" value="state">
             <option>Alabama</option>
@@ -82,6 +82,11 @@ class Page(object):
             <option>Wisconsin</option>
             <option>Wyoming</option>
         </select>
+        <p>Would you like to sign up for company discount emails?</p>
+        <label for="yes" class="discount">Yes</label>
+        <input type="radio" id="yes" name="coupon" value="yes"/>
+        <label for="no" class="discount">No</label>
+        <input type="radio" id="no" name="coupon" value="no"/>
         '''
         self.page_close = '''</form></div>
     </body>

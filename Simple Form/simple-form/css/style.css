@@ -15,7 +15,15 @@ body {
     margin: auto;
 }
 
-label, select, .state_label {
+.discount {
+    display: inline;
+}
+
+#yes {
+    margin-right: 20px;
+}
+
+label, select {
     display: block;
 }
 
