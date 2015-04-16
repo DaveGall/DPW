@@ -13,6 +13,7 @@ body {
     width: 400px;
     border: 1px solid #000000;
     margin: auto;
+    overflow: hidden;
 }
 
 .discount {
@@ -23,10 +24,19 @@ body {
     margin-right: 20px;
 }
 
-label, select {
+label, select, #button {
     display: block;
 }
-
+#button {
+    background-color: lime;
+    float: right;
+    margin: 40px 10px 20px 0;
+    border-radius: 5px;
+}
+#button:hover {
+    background-color: blue;
+    color: #ffffff;
+}
 input {
     margin-bottom: 20px;
 }

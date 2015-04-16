@@ -10,7 +10,6 @@ class MainHandler(webapp2.RequestHandler):
     def get(self):
         self.response.write('Hello world!')
         display = Page()
-        #styling = display.head().format(**locals())
         self.response.write(display.head()+display.body()+display.close())
 
 
@@ -98,7 +97,7 @@ class Page(object):
         <input type="radio" id="yes" name="coupon" value="yes"/>
         <label for="no" class="discount">No</label>
         <input type="radio" id="no" name="coupon" value="no"/>
-        <input type="submit" value="Submit"/>
+        <input type="submit" value="Submit" id="button"/>
         '''
         main = self.page_body
         return main
