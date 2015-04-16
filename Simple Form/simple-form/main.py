@@ -19,7 +19,7 @@ class MainHandler(webapp2.RequestHandler):
             state = self.request.GET['state']
             zip = self.request.GET['zip']
             mail = self.request.GET['coupon']
-            self.response.write(display.head()+display.body()+user+address+city+state+zip+mail+display.close())
+            self.response.write(display.head()+display.result_body()+display.dis_person()+' '+user+display.house()+' '+address+'</br>'+city+', '+state+'</br>'+zip+display.savings()+mail+display.add_ending())
         else:
             self.response.write(display.head()+display.body()+display.close())
 
@@ -47,80 +47,113 @@ class Page(object):
     def body(self):
         self.page_body = '''<div id="form_container">
         <form method="GET">
-        <label for="name">Name:</label><input id="name" type="text" name="user_name"/>
-        <label for="address" >Address:</label><input id="address" type="text" name="address"/>
-        <label for="city">City:</label><input id="city" type="text" name="city"/>
-        <label class="state_label" for="state">State:</label>
-        <select id="state" name="state" value="state">
-            <option>Alabama</option>
-            <option>Alaska</option>
-            <option>Arizona</option>
-            <option>Arkansas</option>
-            <option>California</option>
-            <option>Colorado</option>
-            <option>Connecticut</option>
-            <option>Delaware</option>
-            <option>Florida</option>
-            <option>Georgia</option>
-            <option>Hawaii</option>
-            <option>Idaho</option>
-            <option>Illinois</option>
-            <option>Indiana</option>
-            <option>Iowa</option>
-            <option>Kansas</option>
-            <option>Kentucky</option>
-            <option>Louisiana</option>
-            <option>Maine</option>
-            <option>Maryland</option>
-            <option>Massachusetts</option>
-            <option>Michigan</option>
-            <option>Minnesota</option>
-            <option>Mississippi</option>
-            <option>Missouri</option>
-            <option>Montana</option>
-            <option>Nebraska</option>
-            <option>Nevada</option>
-            <option>New Hampshire</option>
-            <option>New Jersey</option>
-            <option>New Mexico</option>
-            <option>New York</option>
-            <option>North Carolina</option>
-            <option>North Dakota</option>
-            <option>Ohio</option>
-            <option>Oklahoma</option>
-            <option>Oregon</option>
-            <option>Pennsylvania</option>
-            <option>Rhode Island</option>
-            <option>South Carolina</option>
-            <option>South Dakota</option>
-            <option>Tennessee</option>
-            <option>Texas</option>
-            <option>Utah</option>
-            <option>Vermont</option>
-            <option>Virginia</option>
-            <option>Washington</option>
-            <option>West Virginia</option>
-            <option>Wisconsin</option>
-            <option>Wyoming</option>
-        </select><br>
-        <label for="zip">ZipCode:</label><input type="text" id="zip" name="zip">
-        <p>Would you like to sign up for company discount emails?</p>
-        <label for="yes" class="discount">Yes</label>
-        <input type="radio" id="yes" name="coupon" value="yes"/>
-        <label for="no" class="discount">No</label>
-        <input type="radio" id="no" name="coupon" value="no"/>
-        <input type="submit" value="Submit" id="button"/>
+            <label for="name">Name:</label><input id="name" type="text" name="user_name"/>
+            <label for="address" >Address:</label><input id="address" type="text" name="address"/>
+            <label for="city">City:</label><input id="city" type="text" name="city"/>
+            <label class="state_label" for="state">State:</label>
+            <select id="state" name="state" value="state">
+                <option>Alabama</option>
+                <option>Alaska</option>
+                <option>Arizona</option>
+                <option>Arkansas</option>
+                <option>California</option>
+                <option>Colorado</option>
+                <option>Connecticut</option>
+                <option>Delaware</option>
+                <option>Florida</option>
+                <option>Georgia</option>
+                <option>Hawaii</option>
+                <option>Idaho</option>
+                <option>Illinois</option>
+                <option>Indiana</option>
+                <option>Iowa</option>
+                <option>Kansas</option>
+                <option>Kentucky</option>
+                <option>Louisiana</option>
+                <option>Maine</option>
+                <option>Maryland</option>
+                <option>Massachusetts</option>
+                <option>Michigan</option>
+                <option>Minnesota</option>
+                <option>Mississippi</option>
+                <option>Missouri</option>
+                <option>Montana</option>
+                <option>Nebraska</option>
+                <option>Nevada</option>
+                <option>New Hampshire</option>
+                <option>New Jersey</option>
+                <option>New Mexico</option>
+                <option>New York</option>
+                <option>North Carolina</option>
+                <option>North Dakota</option>
+                <option>Ohio</option>
+                <option>Oklahoma</option>
+                <option>Oregon</option>
+                <option>Pennsylvania</option>
+                <option>Rhode Island</option>
+                <option>South Carolina</option>
+                <option>South Dakota</option>
+                <option>Tennessee</option>
+                <option>Texas</option>
+                <option>Utah</option>
+                <option>Vermont</option>
+                <option>Virginia</option>
+                <option>Washington</option>
+                <option>West Virginia</option>
+                <option>Wisconsin</option>
+                <option>Wyoming</option>
+            </select><br>
+            <label for="zip">ZipCode:</label><input type="text" id="zip" name="zip">
+            <p>Would you like to sign up for company discount emails?</p>
+            <label for="yes" class="discount">Yes</label>
+            <input type="radio" id="yes" name="coupon" value="yes"/>
+            <label for="no" class="discount">No</label>
+            <input type="radio" id="no" name="coupon" value="no"/>
+            <input type="submit" value="Submit" id="button"/>
+        </form>
         '''
         main = self.page_body
         return main
 
     def close(self):
-        self.page_close = '''</form></div>
+        self.page_close = '''
+        </div>
     </body>
 </html>
         '''
         end = self.page_close
         return end
+
+    def result_body(self):
+        self.finished_body = '''
+        <div id="form_container">'''
+        fb = self.finished_body
+        return fb
+
+    def dis_person(self):
+        self.person = '''<p>Thank you for your order: '''
+        np = self.person
+        return np
+
+    def house(self):
+        self.add = '''</p><p>Your order will be shipped to: </p>'''
+        home = self.add
+        return home
+
+    def savings(self):
+        self.coup = '''<p>Would you like to receive coupons? '''
+        email_savings = self.coup
+        return email_savings
+
+    def add_ending(self):
+        ending = '''</p>'''
+        return ending
+
+
+
+
+
+
 
 
 
