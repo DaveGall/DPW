@@ -9,11 +9,15 @@ import webapp2
 class MainHandler(webapp2.RequestHandler):
     def get(self):
         self.response.write('Hello world!')
-        display=Page()
-        self.response.write(display.web_page())
+        display = Page()
+        self.response.write(display.head()+display.body()+display.close())
+
+
+
+
 
 class Page(object):
-    def __init__(self):
+    def head(self):
         self.css = "css/style.css"
         self.page_head = '''
 <!DOCTYPE HTML>
@@ -24,6 +28,10 @@ class Page(object):
     </head>
     <body>
         '''
+        top = self.page_head
+        return top
+
+    def body(self):
         self.page_body = '''<div id="form_container">
         <form method="GET">
         <label for="name">Name:</label><input id="name" type="text" name="user_name"/>
@@ -87,15 +95,26 @@ class Page(object):
         <input type="radio" id="yes" name="coupon" value="yes"/>
         <label for="no" class="discount">No</label>
         <input type="radio" id="no" name="coupon" value="no"/>
+        <input type="submit" value="Submit"/>
         '''
+        main = self.page_body
+        return main
+
+    def close(self):
         self.page_close = '''</form></div>
     </body>
 </html>
         '''
-    def web_page(self):
-        all = self.page_head+self.page_body+self.page_close
-        all = all.format(**locals())
-        return all
+        end = self.page_close
+        return end
+
+
+
+    #def web_page(self):
+     #   head = self.page_head
+      #  body = self.page_body
+       # close = self.page_close
+
 
 
 
