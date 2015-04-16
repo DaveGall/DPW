@@ -8,29 +8,30 @@ import webapp2
 
 class MainHandler(webapp2.RequestHandler):
     def get(self):
-        self.response.write('Hello world!')
-        display = Page()
+        display = Page() #This variable grabs the Page class and turns it into an easy to use variable
 
 
-        if self.request.GET:
-            user = self.request.GET['user_name']
-            address = self.request.GET['address']
-            city = self.request.GET['city']
-            state = self.request.GET['state']
-            zip = self.request.GET['zip']
-            mail = self.request.GET['coupon']
-            self.response.write(display.head()+display.result_body()+display.dis_person()+' '+user+display.house()+' '+address+'</br>'+city+', '+state+'</br>'+zip+display.savings()+mail+display.add_ending())
+        if self.request.GET:#This begins the conditional statement that will determine which string to load.
+            user = self.request.GET['user_name'] #This gets the information typed into the name field and puts it into an easy to use variable
+            address = self.request.GET['address'] #This grabs the address typed in and puts it into the address variable for use later
+            city = self.request.GET['city']#This line grabs the city input by the user and places into the variable city for easier use later.
+            state = self.request.GET['state']#This line takes the state chosen by the user and places into the easy to use state variable.
+            zip = self.request.GET['zip']#This grabs the zipcode input by the user and places it into an easy to use variable called zip
+            mail = self.request.GET['coupon']#Takes the result of the users choice on whether to receive coupons in the mail.
+            self.response.write(display.head()+display.result_body()+display.dis_person()+' '+user+display.house()+' '+address+'</br>'+city+', '+state+'</br>'+zip+display.savings()+mail+display.add_ending()+display.close())
+        #The line above is what will display if the user has input information into the fields or if the user clicks the submit button.
         else:
-            self.response.write(display.head()+display.body()+display.close())
+            self.response.write(display.head()+display.body()+display.close())#This line right here will display anytime a new user comes along and needs to use the form.
 
 
 
 
 
-class Page(object):
-    def head(self):
-        self.css = "css/style.css"
-        self.page_head = '''
+class Page(object):#This line starts the Page class which holds all the attributes to create the displayed page the way it is.
+    def head(self):#This begins the head attribute which houses all the critical information to get started.
+        self.css = "css/style.css"#This imports the css style sheet from the css folder to the page to display all your pretty work.
+        #This begins the actual head part of the html page.
+        self.page_head ='''
 <!DOCTYPE HTML>
 <html>
     <head>
@@ -39,12 +40,13 @@ class Page(object):
     </head>
     <body>
         '''
-        top = self.page_head
-        top = top.format(**locals())
-        return top
+        top = self.page_head#This takes the whole page_head section and puts it into a one word variable
+        top = top.format(**locals())#This line allows us to take {self.css} and run our own stylesheet on the web page.
+        return top#This returns the result of page_head for use in our display.
 
 
-    def body(self):
+    def body(self):#This line begins the main body of the html page. It houses the form and all it's parts.
+        #I have put a state selector in there because I like the way they look and they are very common.
         self.page_body = '''<div id="form_container">
         <form method="GET">
             <label for="name">Name:</label><input id="name" type="text" name="user_name"/>
@@ -106,23 +108,23 @@ class Page(object):
             <label for="zip">ZipCode:</label><input type="text" id="zip" name="zip">
             <p>Would you like to sign up for company discount emails?</p>
             <label for="yes" class="discount">Yes</label>
-            <input type="radio" id="yes" name="coupon" value="yes"/>
+            <input type="radio" id="yes" name="coupon" value="Yes"/>
             <label for="no" class="discount">No</label>
-            <input type="radio" id="no" name="coupon" value="no"/>
+            <input type="radio" id="no" name="coupon" value="No"/>
             <input type="submit" value="Submit" id="button"/>
         </form>
         '''
-        main = self.page_body
-        return main
+        main = self.page_body#This takes the information in page_body and places it into main variable
+        return main#This returns the variable main as an output so that we can use it later in our code.
 
-    def close(self):
+    def close(self):#This begins our closing section of code. All the main closing tags are housed here.
         self.page_close = '''
         </div>
     </body>
 </html>
         '''
-        end = self.page_close
-        return end
+        end = self.page_close#This line takes the page_close and creates a variable named end
+        return end#This returns that end variable for use in the code when needed.
 
     def result_body(self):
         self.finished_body = '''
