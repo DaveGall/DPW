@@ -10,7 +10,18 @@ class MainHandler(webapp2.RequestHandler):
     def get(self):
         self.response.write('Hello world!')
         display = Page()
-        self.response.write(display.head()+display.body()+display.close())
+
+
+        if self.request.GET:
+            user = self.request.GET['user_name']
+            address = self.request.GET['address']
+            city = self.request.GET['city']
+            state = self.request.GET['state']
+            zip = self.request.GET['zip']
+            mail = self.request.GET['coupon']
+            self.response.write(display.head()+display.body()+user+address+city+state+zip+mail+display.close())
+        else:
+            self.response.write(display.head()+display.body()+display.close())
 
 
 
@@ -91,7 +102,8 @@ class Page(object):
             <option>West Virginia</option>
             <option>Wisconsin</option>
             <option>Wyoming</option>
-        </select>
+        </select><br>
+        <label for="zip">ZipCode:</label><input type="text" id="zip" name="zip">
         <p>Would you like to sign up for company discount emails?</p>
         <label for="yes" class="discount">Yes</label>
         <input type="radio" id="yes" name="coupon" value="yes"/>
@@ -110,12 +122,6 @@ class Page(object):
         end = self.page_close
         return end
 
-
-
-    #def web_page(self):
-     #   head = self.page_head
-      #  body = self.page_body
-       # close = self.page_close
 
 
 
