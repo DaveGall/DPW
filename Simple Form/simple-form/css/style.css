@@ -3,7 +3,10 @@ David Gall
 04/15/2015
 DPW
 Simple Form CSS
+
+When thinking about the design I took into account what the color schemes used to be on the windows systems and that is how I came up with the blue and white gradient and also with the subtle purple and white on the receipt.
 */
+
 
 body {
     background: linear-gradient(to bottom, rgba(183,222,237,1) 0%, rgba(113,206,239,1) 31%, rgba(33,180,226,1) 58%, rgba(183,222,237,1) 98%, rgba(183,222,237,1) 100%);;/*This gives the background a nice gradient. I created it on cssmatic.*/
