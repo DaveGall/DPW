@@ -39,7 +39,14 @@ class Page(object):#This line starts the Page class which holds all the attribut
         <link href="{self.css}" rel="stylesheet" type="text/css" />
     </head>
     <body>
+        <div class="title">
+            <h3>Thank you for ordering a new computer with us today</h3>
+            <p>We hope you enjoy it.</p>
+            <p>Please contact us at 1-800-555-1234 if you need assistance.</p>
+        </div>
+        <hr>
         '''
+        #I added some h3 and p tags that will display a nice little header at the top of the page.
         top = self.page_head#This takes the whole page_head section and puts it into a one word variable
         top = top.format(**locals())#This line allows us to take {self.css} and run our own stylesheet on the web page.
         return top#This returns the result of page_head for use in our display.
@@ -49,9 +56,9 @@ class Page(object):#This line starts the Page class which holds all the attribut
         #I have put a state selector in there because I like the way they look and they are very common.
         self.page_body = '''<div id="form_container">
         <form method="GET">
-            <label for="name">Name:</label><input id="name" type="text" name="user_name"/>
-            <label for="address" >Address:</label><input id="address" type="text" name="address"/>
-            <label for="city">City:</label><input id="city" type="text" name="city"/>
+            <label for="name">Name:</label><input id="name" type="text" name="user_name" placeholder="John Smith"/>
+            <label for="address" >Address:</label><input id="address" type="text" name="address" placeholder="123 old st."/>
+            <label for="city">City:</label><input id="city" type="text" name="city" placeholder="Your Town"/>
             <label class="state_label" for="state">State:</label>
             <select id="state" name="state" value="state">
                 <option>Alabama</option>
@@ -105,7 +112,7 @@ class Page(object):#This line starts the Page class which holds all the attribut
                 <option>Wisconsin</option>
                 <option>Wyoming</option>
             </select><br>
-            <label for="zip">ZipCode:</label><input type="text" id="zip" name="zip">
+            <label for="zip">ZipCode:</label><input type="text" id="zip" name="zip" placeholder="12345">
             <p>Would you like to sign up for company discount emails?</p>
             <label for="yes" class="discount">Yes</label>
             <input type="radio" id="yes" name="coupon" value="Yes"/>
@@ -120,6 +127,15 @@ class Page(object):#This line starts the Page class which holds all the attribut
     def close(self):#This begins our closing section of code. All the main closing tags are housed here.
         self.page_close = '''
         </div>
+        <hr>
+        <footer>
+            <ul>
+                <li>Contact</li>
+                <li>Legal</li>
+                <li>Address</li>
+                <li>Jobs</li>
+            </ul>
+        </footer>
     </body>
 </html>
         '''
@@ -128,7 +144,7 @@ class Page(object):#This line starts the Page class which holds all the attribut
 
     def result_body(self):#This begins the attributes that we will use after the user has typed in their information.
         self.finished_body = '''
-        <div id="form_container">'''
+        <div id="new_container">'''
         fb = self.finished_body#This takes the opening div tag section and puts it into a tidy variable
         return fb#This returns that variable for use later in the code.
 

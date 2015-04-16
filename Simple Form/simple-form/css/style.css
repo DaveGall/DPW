@@ -6,13 +6,24 @@ Simple Form CSS
 */
 
 body {
-    background: aqua;/*This gives the background the color that I want*/
-}
+    background: linear-gradient(to bottom, rgba(183,222,237,1) 0%, rgba(113,206,239,1) 31%, rgba(33,180,226,1) 58%, rgba(183,222,237,1) 98%, rgba(183,222,237,1) 100%);;/*This gives the background a nice gradient. I created it on cssmatic.*/
 
+}
+.title {
+    text-align: center;/*This aligns the center top text in the center of the page.*/
+}
 #form_container {/*Styles the form container*/
     width: 400px;/*Gives it a width of 400 pixels*/
-    margin: 40px auto;/*Top and bottom margin of 40 and centers the sides*/
+    margin: 60px auto;/*Top and bottom margin of 60 and centers the sides*/
     overflow: hidden;/*Makes sure everything fits inside the container*/
+}
+#new_container {/*This is to design the results page div for the user input.*/
+    box-shadow: 4px 4px 4px #000000;/*This will give the div box a nice shadow to give it a floating look.*/
+    border-radius: 20px;/*This gives the div a nice rounded border*/
+    width: 400px;/*The width of the container which I kept the same as the other box.*/
+    margin: 60px auto;/*Keeps the margins the same as with the original container.*/
+    overflow: hidden;/*Makes sure that all elements fit inside the box. Below is another gradient added with the help of the site cssmatic.*/
+    background: linear-gradient(to bottom, rgba(216,208,239,1) 0%, rgba(216,208,239,1) 21%, rgba(235,233,249,1) 53%, rgba(206,199,236,1) 82%, rgba(193,191,234,1) 100%);
 }
 
 .discount {/*Keeps the radials on the same line*/
@@ -38,4 +49,12 @@ label, select, #button {
 }
 input {
     margin-bottom: 20px;/*This just gives the input fields 20 pixels of spacing from the bottom.*/
+}
+
+footer ul li {/*This is the code that styles the links in the footer*/
+    display: inline-block;/*This line changes the links to inline instead of te normal block style.*/
+    margin-right: 60px;/*This gives the li link 60 pixels of space to the right of each one.*/
+}
+footer ul {
+    margin: 20px 200px;/*This gives the ul a margin of 20px to the top and bottom and 200px on the left and right*/
 }
