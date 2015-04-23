@@ -5,10 +5,13 @@ DPW
 Reusable Library
 '''
 import webapp2
+from page import Page
 
 class MainHandler(webapp2.RequestHandler):
     def get(self):
-        self.response.write('Hello world!')
+        p = Page()
+        self.response.write(p.head())
+
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler)
