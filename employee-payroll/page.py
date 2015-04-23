@@ -5,6 +5,8 @@
 
 
 class Page(object):
+    def __init__(self):
+        pass
     def head(self):
         self.css = "css/style.css"
         self.head = '''
@@ -26,6 +28,12 @@ class Page(object):
 
     def body(self):
         self.body = '''
+
+        '''
+
+
+    def close(self):
+        self.close = '''
 
         '''
 
