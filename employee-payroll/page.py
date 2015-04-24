@@ -17,7 +17,10 @@ class Page(object):
         <link href="{self.css}" rel="stylesheet" type="text/css"/>
     </head>
     <body>
-        <h2>Your Payroll</h2>
+        <div class="container">
+            <h2>Your Payroll Entry</h2>
+
+
         '''
 
         header = self.head
@@ -28,13 +31,21 @@ class Page(object):
 
     def body(self):
         self.body = '''
+            <div class="myForm">
+                <form method="GET">
+                    <label for="name">Employee Name:</label>
+                    <input id="name" type="text" name="employee_name" placeholder="Jim"/>
 
+                </form>
+
+            </div>
         '''
 
-
+        body = self.body
+        return body
     def close(self):
         self.close = '''
-
+        </div>
         '''
 
 
