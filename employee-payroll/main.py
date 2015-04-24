@@ -15,8 +15,9 @@ class MainHandler(webapp2.RequestHandler):
         fb = FinalBody()
         money = Payroll()
         pay = EmployeeCheck()
+        deductions = pay.deductions(5)
         gross = pay.check_gross(80,10)
-        tax = pay.employee_taxes(800, .23)
+        tax = pay.employee_taxes(800, deductions)
         print pay.check_net(gross, tax)
 
 

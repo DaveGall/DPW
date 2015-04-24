@@ -7,6 +7,14 @@ class EmployeeCheck(object):
     def __init__(self):
         pass
 
+    def deductions(self, d):
+        if d < 4:
+            rate = .23
+            return rate
+        else:
+            rate = .28
+            return rate
+
     def check_gross(self, h, w):
         self.gross = h * w
         gross = self.gross
