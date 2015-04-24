@@ -3,49 +3,73 @@
 
 #Payroll class for my employee hours tracker.
 
+class EmployeeCheck(object):
+    def __init__(self):
+        pass
 
-class Payroll(object):
+    def check_gross(self, h, w):
+        self.gross = h * w
+        gross = self.gross
+        return gross
+
+    def employee_taxes(self, g, r):
+        self.taxes = g * r
+        taxes = self.taxes
+        return taxes
+
+    def check_net(self, gross, taxes):
+        self.net = gross - taxes
+        net = self.net
+        return net
+
+
+
+
+
+
+
+
+class Payroll(object):#Stores Data
     def __init__(self):
         self.employee_name = ""
         self.employee_hours = 0
         self.employee_dependants = 0
-        self.hourly_pay = 0
-        self.__taxes = 0
-        self.__employee_check = 0
+        self.__hourly_pay = 0#Maybe change this to the hidden value.
+        self.taxes = 0#undo as hidden value
+        self.employee_check = 0#undo as hidden value
 
 
 
 
-    def taxes(self):
+    #def taxes(self):
 
-        if self.employee_dependants < 4:
+     #   if self.employee_dependants < 4:
 
-            rate = .23
-            results = (self.employee_hours*self.hourly_pay)*rate
-            print results
-        else:
-            rate = .20
-            results = (self.employee_hours*self.hourly_pay)*rate
-            print results
+      #      rate = .23
+       #     results = (self.employee_hours*self.hourly_pay)*rate
+        #    print results
+        #else:
+         #   rate = .20
+          #  results = (self.employee_hours*self.hourly_pay)*rate
+           # print results
 
-            return results
-
-
+            #return results
 
 
 
 
     @property
-    def employee_check(self):
-        return self.__employee_check
+    def hourly_pay(self):
+        return self.__hourly_pay
 
-    #@employee_check.setter
-    #def employee_check(self, new_paycheck):
-     #   self.__employee_check = new_paycheck
-    @employee_check.setter
-    def employee_check(self, new_check):
-        self.__employee_check = self.hourly_pay*self.employee_hours
-        self.__employee_check = new_check
+    @hourly_pay.setter
+    def hourly_pay(self, hp):
+        if hp < 0:
+            print "Please put a valid wage in."
+        else:
+            self.hourly_pay = hp
+
+
 
 
 

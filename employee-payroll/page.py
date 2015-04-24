@@ -53,7 +53,7 @@ class Page(object):
         return body
     def close(self):
         self.close = '''
-            
+
         </div>
         '''
         close = self.close

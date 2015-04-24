@@ -7,13 +7,18 @@ Reusable Library
 import webapp2
 from page import Page
 from page import FinalBody
-from lib import Payroll
+from lib import Payroll, EmployeeCheck
 
 class MainHandler(webapp2.RequestHandler):
     def get(self):
         p = Page()
         fb = FinalBody()
         money = Payroll()
+        pay = EmployeeCheck()
+        gross = pay.check_gross(80,10)
+        tax = pay.employee_taxes(800, .23)
+        print pay.check_net(gross, tax)
+
 
 
         if self.request.GET:
