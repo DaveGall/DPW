@@ -8,7 +8,7 @@ class EmployeeCheck(object):
         pass
 
     def deductions(self, d):
-        if d < 4:
+        if int(d) < 4:
             rate = .23
             return rate
         else:

@@ -15,11 +15,6 @@ class MainHandler(webapp2.RequestHandler):
         fb = FinalBody()
         money = Payroll()
         pay = EmployeeCheck()
-        deductions = pay.deductions(5)
-        #gross = pay.check_gross(80,10)
-        #tax = pay.employee_taxes(800, deductions)
-        #net = pay.check_net(gross, tax)
-        print deductions
 
 
 
@@ -32,7 +27,8 @@ class MainHandler(webapp2.RequestHandler):
             gross = new.check_gross(hours, pay)
             deductions = new.deductions(dependants)
             tax = new.employee_taxes(gross, deductions)
-            self.response.write(p.head()+fb.results_body()+fb.results_name()+name+" "+fb.results_hours()+hours+" "+fb.results_users()+" $"+pay+" per hour"+fb.results_gross()+" $"+str(gross)+fb.results_net()+" "+str(gross)+" "+str(tax)+p.close())
+            net = new.check_net(gross, tax)
+            self.response.write(p.head()+fb.results_body()+fb.results_name()+name+" "+fb.results_hours()+hours+" "+fb.results_users()+" $"+pay+" per hour"+fb.results_gross()+" $"+str(gross)+fb.results_tax()+" $"+str(tax)+fb.results_net()+" $"+str(net)+fb.results_close()+p.close())
         else:
             self.response.write(p.head()+p.body()+p.close())
 
