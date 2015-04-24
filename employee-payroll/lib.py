@@ -16,17 +16,17 @@ class EmployeeCheck(object):
             return rate
 
     def check_gross(self, hours, pay):
-        self.gross = int(hours) * int(pay)
+        self.gross = float(hours) * float(pay)
         gross = self.gross
         return gross
 
     def employee_taxes(self, g, r):
-        self.taxes = g * r
+        self.taxes = float(g) * float(r)
         taxes = self.taxes
         return taxes
 
     def check_net(self, gross, taxes):
-        self.net = gross - taxes
+        self.net = float(gross) - float(taxes)
         net = self.net
         return net
 
