@@ -24,7 +24,7 @@ class MainHandler(webapp2.RequestHandler):
             hp = self.request.GET["hourly_pay"]
             eh = self.request.GET["employee_hours"]
             total = float(hp)*float(eh)
-            self.response.write(p.head()+fb.results_body()+fb.results_name()+name+" "+fb.results_hours()+hours+" "+fb.results_users()+" $"+pay+" per hour"+fb.results_gross()+" $"+str(total)+p.close())
+            self.response.write(p.head()+fb.results_body()+fb.results_name()+name+" "+fb.results_hours()+hours+" "+fb.results_users()+" $"+pay+" per hour"+fb.results_gross()+" $"+str(total)+fb.results_net()+p.close())
         else:
             self.response.write(p.head()+p.body()+p.close())
 

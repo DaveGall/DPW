@@ -71,7 +71,6 @@ class FinalBody(object):
         pass
     def results_body(self):
         self.new_body = '''
-            <div class="container">
             '''
         new_body = self.new_body
         return new_body
@@ -83,26 +82,25 @@ class FinalBody(object):
         return new_name
     def results_hours(self):
         self.new_hours = '''
-                </p><p>Users hours will go here:
+                </p><hr><p>Users hours will go here:
                 '''
         new_hours = self.new_hours
         return new_hours
     def results_users(self):
         self.rate = '''
-                </p><p>Users rate of pay will go here:
+                </p><hr><p>Users rate of pay will go here:
                 '''
         rate = self.rate
         return rate
     def results_gross(self):
         self.new_gross = '''
-                </p><p>Users gross paycheck:
+                </p><hr><p>Users gross paycheck:
                 '''
         new_gross = self.new_gross
         return new_gross
     def results_net(self):
         self.new_net = '''
-                </p><p>Users net paycheck:</p>
-            </div>
+                </p><hr><p>Users net paycheck:</p><hr>
         '''
         new_net = self.new_net
         return new_net
