@@ -72,12 +72,19 @@ class FinalBody(object):
     def results_body(self):
         self.new_body = '''
             <div class="container">
+            '''
+    def results_name(self):'''
                 <p>User name will go here.</p>
+                '''
+    def results_hours(self):'''
                 <p>Users hours will go here.</p>
+                '''
                 <p>Users rate of pay will go here.</p>
                 <p>Users gross paycheck.</p>
                 <p>Users net paycheck.</p>
             </div>
         '''
+        new_body = self.new_body
+        return new_body
 
 

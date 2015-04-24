@@ -6,19 +6,27 @@ Reusable Library
 '''
 import webapp2
 from page import Page
+from page import FinalBody
 from lib import Payroll
 
 class MainHandler(webapp2.RequestHandler):
     def get(self):
         p = Page()
-        self.response.write(p.head()+p.body()+p.close())
+        fb = FinalBody()
+        money = Payroll()
+        print str(money.employee_check)
 
         if self.request.GET:
             name = self.request.GET["employee_name"]
             hours = self.request.GET["employee_hours"]
+            dependants = self.request.GET["employee_dependants"]
+            pay = self.request.GET["hourly_pay"]
+            self.response.write(p.head()+fb.results_body()+name+" "+hours+" "+dependants+" $"+pay)
+        else:
+            self.response.write(p.head()+p.body()+p.close())
 
-        money = Payroll()
-        self.response.write(money.taxes())
+
+
 
 
 app = webapp2.WSGIApplication([
