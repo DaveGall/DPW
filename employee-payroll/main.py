@@ -13,6 +13,10 @@ class MainHandler(webapp2.RequestHandler):
         p = Page()
         self.response.write(p.head()+p.body()+p.close())
 
+        if self.request.GET:
+            name = self.request.GET["employee_name"]
+            hours = self.request.GET["employee_hours"]
+
         money = Payroll()
         self.response.write(money.taxes())
 

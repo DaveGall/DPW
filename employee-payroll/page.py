@@ -66,13 +66,17 @@ class Page(object):
 
 
 
-class FinalResults(object):
+class FinalBody(object):
     def __init__(self):
         pass
     def results_body(self):
         self.new_body = '''
             <div class="container">
-
+                <p>User name will go here.</p>
+                <p>Users hours will go here.</p>
+                <p>Users rate of pay will go here.</p>
+                <p>Users gross paycheck.</p>
+                <p>Users net paycheck.</p>
             </div>
         '''
 
