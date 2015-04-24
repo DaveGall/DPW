@@ -35,6 +35,8 @@ class Page(object):
                 <form method="GET">
                     <label for="name">Employee Name:</label>
                     <input id="name" type="text" name="employee_name" placeholder="Jim"/>
+                    <label for="hours">Hours Worked:</label>
+                    <input id="hours" type="text" name="employee_hours" placeholder="80"/>
 
                 </form>
 
