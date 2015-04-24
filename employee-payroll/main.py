@@ -14,14 +14,17 @@ class MainHandler(webapp2.RequestHandler):
         p = Page()
         fb = FinalBody()
         money = Payroll()
-        print str(money.employee_check)
+
 
         if self.request.GET:
             name = self.request.GET["employee_name"]
             hours = self.request.GET["employee_hours"]
             dependants = self.request.GET["employee_dependants"]
             pay = self.request.GET["hourly_pay"]
-            self.response.write(p.head()+fb.results_body()+fb.results_name()+name+" "+fb.results_hours()+hours+" "+fb.results_users()+" $"+pay+" per hour")
+            hp = self.request.GET["hourly_pay"]
+            eh = self.request.GET["employee_hours"]
+            total = float(hp)*float(eh)
+            self.response.write(p.head()+fb.results_body()+fb.results_name()+name+" "+fb.results_hours()+hours+" "+fb.results_users()+" $"+pay+" per hour"+fb.results_gross()+" $"+str(total)+p.close())
         else:
             self.response.write(p.head()+p.body()+p.close())
 
