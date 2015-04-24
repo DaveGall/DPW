@@ -40,6 +40,10 @@ class Page(object):
                     <label for="dependants">Number of Dependants</label>
                     <input id="dependants type="text"
  name="employee_dependants" placeholder="2"/>
+                    <label for="wage">Hourly Wage</label>
+                    <input id="wage" type="text" name="hourly_pay" placeholder="9.25"/>
+
+                    <input type="submit" value="Add" id="button"/>
                 </form>
 
             </div>
@@ -49,7 +53,27 @@ class Page(object):
         return body
     def close(self):
         self.close = '''
+            <footer>
+                <ul>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </footer>
         </div>
+        '''
+        close = self.close
+        return close
+
+
+
+class FinalResults(object):
+    def __init__(self):
+        pass
+    def results_body(self):
+        self.new_body = '''
+            <div class="container">
+
+            </div>
         '''
 
 

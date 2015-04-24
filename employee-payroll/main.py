@@ -11,7 +11,7 @@ from lib import Payroll
 class MainHandler(webapp2.RequestHandler):
     def get(self):
         p = Page()
-        self.response.write(p.head()+p.body())
+        self.response.write(p.head()+p.body()+p.close())
 
         money = Payroll()
         self.response.write(money.taxes())
