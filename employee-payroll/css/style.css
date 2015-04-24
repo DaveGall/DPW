@@ -5,13 +5,14 @@ body {
 }
 h2 {
     text-align: center;
+    color: #B9EEFF;
 }
 .container {
     border: 5px outset;
     box-shadow: 3px 3px 3px #FF9932;
     width: 400px;
     margin: auto;
-    background-color: #B9EEFF;
+    background-color: #549CB2;
 }
 input {
     display: block;
@@ -21,9 +22,15 @@ input {
 
 label, p {
     padding-left: 10px;
+    color: #FFFFFF;
 }
 
 #button {
     margin: 15px 0 10px 110px;
-
+    background-color: #B9EEFF;
+    border-radius: 10px;
+}
+#button:hover {
+    background-color: #FFC07F;
+    color: #FFFFFF;
 }

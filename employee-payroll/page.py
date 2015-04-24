@@ -43,7 +43,7 @@ class Page(object):
                     <label for="wage">Hourly Wage</label>
                     <input id="wage" type="text" name="hourly_pay" placeholder="9.25"/>
 
-                    <input type="submit" value="Add" id="button"/>
+                    <input type="submit" value="Submit" id="button"/>
                 </form>
 
             </div>
@@ -53,12 +53,7 @@ class Page(object):
         return body
     def close(self):
         self.close = '''
-            <footer>
-                <ul>
-                    <li>Link 1</li>
-                    <li>Link 2</li>
-                </ul>
-            </footer>
+            
         </div>
         '''
         close = self.close
