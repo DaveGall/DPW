@@ -18,8 +18,8 @@ class Page(object):
     </head>
     <body>
         <div class="container">
-            <h2>Your Payroll Entry</h2>
-
+            <h2>Employee Payroll</h2>
+            <hr>
 
         '''
 

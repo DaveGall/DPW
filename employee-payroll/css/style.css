@@ -1,17 +1,17 @@
 
 
 body {
-    background-color: lime;
+    background-color: #FFC07F;
 }
 h2 {
     text-align: center;
 }
 .container {
-    border: 4px outset;
-    box-shadow: 3px 3px 3px #000000;
+    border: 5px outset;
+    box-shadow: 3px 3px 3px #FF9932;
     width: 400px;
     margin: auto;
-    background-color: aqua;
+    background-color: #B9EEFF;
 }
 input {
     display: block;
@@ -25,4 +25,5 @@ label, p {
 
 #button {
     margin: 15px 0 10px 110px;
+
 }
