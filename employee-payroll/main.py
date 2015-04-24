@@ -14,7 +14,6 @@ class MainHandler(webapp2.RequestHandler):
         p = Page()
         fb = FinalBody()
         money = Payroll()
-        pay = EmployeeCheck()
 
 
 

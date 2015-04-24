@@ -21,14 +21,14 @@ class EmployeeCheck(object):#This begins my functions class that will handle all
         return gross#This returns the results of the equation.
 
     def employee_taxes(self, g, r):#This function gives us how much the employee paid in total taxes.
-        self.taxes = float(g) * float(r)
+        self.taxes = float(g) * float(r)#This will multiply the two arguments which equates to the users gross pay and the tax rate.
         taxes = self.taxes
-        return taxes
+        return taxes#This returns the result of the equation above to be used in the code.
 
-    def check_net(self, gross, taxes):
-        self.net = float(gross) - float(taxes)
+    def check_net(self, gross, taxes):#This code will give the user their net pay.
+        self.net = float(gross) - float(taxes)#This subtracts the users gross pay by how much they paid in taxes to get their gross pay.
         net = self.net
-        return net
+        return net#This returns the users net pay to be displayed on the page.
 
 
 
@@ -37,26 +37,24 @@ class EmployeeCheck(object):#This begins my functions class that will handle all
 
 
 
-class Payroll(object):#Stores Data
+class Payroll(object):#Sets up and stores the data from the user
     def __init__(self):
-        self.employee_name = ""
-        self.employee_hours = 0
-        self.employee_dependants = 0
-        self.__hourly_pay = 0#Maybe change this to the hidden value.
-        self.taxes = 0#undo as hidden value
-        self.employee_check = 0#undo as hidden value
+        self.employee_name = "" #stores the employee name
+        self.employee_hours = 0 #stores the employee hours
+        self.employee_dependants = 0#stores the users dependants
+        self.__hourly_pay = 0#Restricted value
 
 
-    @property
+    @property#decorator that is needed to set up the setter for __hourly_pay
     def hourly_pay(self):
-        return self.__hourly_pay
+        return self.__hourly_pay #Returns __hourly_pay
 
-    @hourly_pay.setter
-    def hourly_pay(self, hp):
+    @hourly_pay.setter#setter for __hourly_pay
+    def hourly_pay(self, hp):#This will validate whether the user puts in a number greater than 0
         if hp < 0:
-            print "Please put a valid wage in."
+            print "Please put a valid wage in."#This will display in the console if the user puts in a value less than 0
         else:
-            self.hourly_pay = hp
+            self.hourly_pay = hp#It will allow the input if the value is 0 or above.
 
 
 
