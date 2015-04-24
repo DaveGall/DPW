@@ -15,8 +15,8 @@ class EmployeeCheck(object):
             rate = .28
             return rate
 
-    def check_gross(self, h, w):
-        self.gross = h * w
+    def check_gross(self, hours, pay):
+        self.gross = int(hours) * int(pay)
         gross = self.gross
         return gross
 
@@ -45,25 +45,6 @@ class Payroll(object):#Stores Data
         self.__hourly_pay = 0#Maybe change this to the hidden value.
         self.taxes = 0#undo as hidden value
         self.employee_check = 0#undo as hidden value
-
-
-
-
-    #def taxes(self):
-
-     #   if self.employee_dependants < 4:
-
-      #      rate = .23
-       #     results = (self.employee_hours*self.hourly_pay)*rate
-        #    print results
-        #else:
-         #   rate = .20
-          #  results = (self.employee_hours*self.hourly_pay)*rate
-           # print results
-
-            #return results
-
-
 
 
     @property
