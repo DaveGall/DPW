@@ -77,29 +77,35 @@ class FinalBody(object):
         return new_body
     def results_name(self):
         self.new_name = '''
-                <p>User name will go here.</p>
+                <p>User name will go here:
                 '''
         new_name = self.new_name
         return new_name
     def results_hours(self):
         self.new_hours = '''
-                <p>Users hours will go here.</p>
+                </p><p>Users hours will go here:
                 '''
         new_hours = self.new_hours
         return new_hours
     def results_users(self):
         self.rate = '''
-                <p>Users rate of pay will go here.</p>
+                </p><p>Users rate of pay will go here:
                 '''
+        rate = self.rate
+        return rate
     def results_gross(self):
         self.new_gross = '''
-                <p>Users gross paycheck.</p>
+                </p><p>Users gross paycheck:
                 '''
+        new_gross = self.new_gross
+        return new_gross
     def results_net(self):
         self.new_net = '''
-                <p>Users net paycheck.</p>
+                </p><p>Users net paycheck:</p>
             </div>
         '''
+        new_net = self.new_net
+        return new_net
         #new_body = self.new_body+self.new_name+self.new_hours+self.rate+self.new_gross+self.new_net
         #return new_body
 

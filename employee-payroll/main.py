@@ -21,7 +21,7 @@ class MainHandler(webapp2.RequestHandler):
             hours = self.request.GET["employee_hours"]
             dependants = self.request.GET["employee_dependants"]
             pay = self.request.GET["hourly_pay"]
-            self.response.write(p.head()+fb.results_body()+name+" "+hours+" "+dependants+" $"+pay)
+            self.response.write(p.head()+fb.results_body()+fb.results_name()+name+" "+fb.results_hours()+hours+" "+fb.results_users()+" $"+pay+" per hour")
         else:
             self.response.write(p.head()+p.body()+p.close())
 
