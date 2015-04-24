@@ -37,7 +37,9 @@ class Page(object):
                     <input id="name" type="text" name="employee_name" placeholder="Jim"/>
                     <label for="hours">Hours Worked:</label>
                     <input id="hours" type="text" name="employee_hours" placeholder="80"/>
-
+                    <label for="dependants">Number of Dependants</label>
+                    <input id="dependants type="text"
+ name="employee_dependants" placeholder="2"/>
                 </form>
 
             </div>
