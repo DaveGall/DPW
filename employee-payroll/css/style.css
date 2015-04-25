@@ -1,7 +1,8 @@
 
 
-body {/*This section sets the background color to a soft brown/beige*/
-    background-color: #FFC07F;
+body {/*This section sets the background to an image of a light blue sky.*/
+    background-image: url('../images/IMG_1451.JPG');
+    background-position: center;
 }
 h2 {/*Aligns the h2 tag to the center and changes the color to a light blue.*/
     text-align: center;
@@ -9,7 +10,7 @@ h2 {/*Aligns the h2 tag to the center and changes the color to a light blue.*/
 }
 .container {/*This is the styling for the container.*/
     border: 5px outset;/*Sets the border to 5px and outset*/
-    box-shadow: 3px 3px 3px #FF9932;/*This gives the box a little shadow to give it some dimension. It also gives the shadow a orange color to make it more natural*/
+    box-shadow: 3px 3px 3px #B9EEFF;/*This gives the box a little shadow to give it some dimension. It also gives the shadow a orange color to make it more natural*/
     width: 400px;/*Sets the width of the container*/
     margin: auto;/*Centers the container*/
     background-color: #549CB2;/*Sets the background color of the container to a semi-dark blue*/
