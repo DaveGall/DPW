@@ -1,36 +1,36 @@
 
 
-body {
+body {/*This section sets the background color to a soft brown/beige*/
     background-color: #FFC07F;
 }
-h2 {
+h2 {/*Aligns the h2 tag to the center and changes the color to a light blue.*/
     text-align: center;
     color: #B9EEFF;
 }
-.container {
-    border: 5px outset;
-    box-shadow: 3px 3px 3px #FF9932;
-    width: 400px;
-    margin: auto;
-    background-color: #549CB2;
+.container {/*This is the styling for the container.*/
+    border: 5px outset;/*Sets the border to 5px and outset*/
+    box-shadow: 3px 3px 3px #FF9932;/*This gives the box a little shadow to give it some dimension. It also gives the shadow a orange color to make it more natural*/
+    width: 400px;/*Sets the width of the container*/
+    margin: auto;/*Centers the container*/
+    background-color: #549CB2;/*Sets the background color of the container to a semi-dark blue*/
 }
-input {
+input {/*Adjusts the input fields to have a little margin in from the left and puts them in a block form*/
     display: block;
     margin-left: 10px;
     margin-bottom: 10px;
 }
 
-label, p {
+label, p {/*Sets the padding and color of the labels and the paragraphs.*/
     padding-left: 10px;
     color: #FFFFFF;
 }
 
-#button {
+#button {/*button styling, sets it to the right of the inputs, gives it a nice border and puts the color at a nice light blue.*/
     margin: 15px 0 10px 110px;
     background-color: #B9EEFF;
     border-radius: 10px;
 }
-#button:hover {
+#button:hover {/*This is the hover effect for the button. It changes the color of the background and the text.*/
     background-color: #FFC07F;
     color: #FFFFFF;
 }
