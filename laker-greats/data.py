@@ -29,5 +29,13 @@ class Data(object):
         elgin.year_drafted = 1959
 
         wilt = Lakers()
+        wilt.number = 13
+        wilt.name = 'Wilt Chamberlain'
+        wilt.game_average = 30.1
+        wilt.career_points = 31,419
+        wilt.position = 'Center'
+        wilt.year_drafted = 1968
+
+        
 
 
