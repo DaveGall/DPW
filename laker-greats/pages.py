@@ -1,5 +1,8 @@
 #__author__ = 'davegall'
 
+from data import Data
+
+
 class MainPage(object):
     def __init__(self):
         self.css = 'css/style.css'
@@ -19,14 +22,7 @@ class MainPage(object):
              Coming from Minneapolis in 1960 they kept the Laker name and have had their great years and had some bad years,
              this season in particular. </p>
         </div>
-        <div>
-            <a href="?name=kobe">Kobe Bryant</a></br>
-            <a href="?name=shaq">Shaquille O'Neal</a></br>
-            <a href="?name=kareem">Kareem Abdul Jabbar</a></br>
-            <a href="?name=elgin">Elgin Baylor</a></br>
-            <a href="?name=magic">Magic Johnson</a></br>
-            <a href="?name=wilt">Wilt Chamberlain</a></br>
-        </div>
+
         '''
         self.close = '''
     </body
@@ -41,9 +37,10 @@ class MainPage(object):
 class ResultsPage(MainPage):
     def __init__(self):
         MainPage.__init__(self)
-        self.div_open = '<div method="GET">'
-        self.div_close = '</div>'
-        self.__links = []
+        d = Data()
+        self.div_open = '<ul>'
+        self.div_close = '</ul>'
+        self.__links = d.loop()
         self.place_stats = ''
 
     @property
