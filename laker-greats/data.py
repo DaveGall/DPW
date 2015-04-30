@@ -36,6 +36,13 @@ class Data(object):
         wilt.position = 'Center'
         wilt.year_drafted = 1968
 
-        
+        magic = Lakers()
+        magic.number = 32
+        magic.name = 'Magic Johnson'
+        magic.game_average = 19.5
+        magic.career_points = 17,707
+        magic.position = 'Guard'
+        magic.year_drafted = 1979
+
 
 
