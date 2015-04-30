@@ -12,7 +12,14 @@ class MainPage(object):
     </head>
     <body>
         '''
-        self.body = 'The Lakers are Great'
+        self.body = '''
+        <div class="container">
+            <h2>The Greatest team of all time!!</h2>
+            <p>Although the Lakers have not always been in Los Angeles it is where I remember them from.
+             Coming from Minneapolis in 1960 they kept the Laker name and have had their great years and had some bad years,
+             this season in particular. </p>
+        </div>
+        '''
         self.close = '''
     </body
 </html>
