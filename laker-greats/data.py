@@ -60,5 +60,7 @@ class Data(object):
         shaq.position = 'Center'
         shaq.year_drafted = 1996
 
+        self.players = [kareem, elgin, wilt, magic, kobe, shaq]
+
 
 
