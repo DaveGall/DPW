@@ -13,10 +13,13 @@ class MainHandler(webapp2.RequestHandler):
     def get(self):
         p = ResultsPage()
         d = Data()
+        p.links = d.loop()
+
         #self.response.write(d.players[1])
         #p.body = d.loop()
         self.response.write(p.print_out())
         self.response.write(d.loop())
+        print p.links
 
 
 '''

@@ -1,7 +1,5 @@
 #__author__ = 'davegall'
 
-from data import Data
-
 
 class MainPage(object):
     def __init__(self):
@@ -21,10 +19,11 @@ class MainPage(object):
             <p>Although the Lakers have not always been in Los Angeles it is where I remember them from.
              Coming from Minneapolis in 1960 they kept the Laker name and have had their great years and had some bad years,
              this season in particular. </p>
-        </div>
+
 
         '''
         self.close = '''
+        </div>
     </body
 </html>
         '''
@@ -37,10 +36,9 @@ class MainPage(object):
 class ResultsPage(MainPage):
     def __init__(self):
         MainPage.__init__(self)
-        d = Data()
         self.div_open = '<ul>'
         self.div_close = '</ul>'
-        self.__links = d.loop()
+        self.__links = []
         self.place_stats = ''
 
     @property
