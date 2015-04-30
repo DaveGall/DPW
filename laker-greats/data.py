@@ -52,7 +52,13 @@ class Data(object):
         kobe.position = 'Guard'
         kobe.year_drafted = 1996
 
-        
+        shaq = Lakers()
+        shaq.number = 34
+        shaq.name = "Shaquille O'Neal"
+        shaq.game_average = 23.7
+        shaq.career_points = 28,596
+        shaq.position = 'Center'
+        shaq.year_drafted = 1996
 
 
 
