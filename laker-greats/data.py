@@ -62,5 +62,8 @@ class Data(object):
 
         self.players = [kareem, elgin, wilt, magic, kobe, shaq]
 
-
-
+    def loop(self):
+        self.output = ''
+        for player in self.players:
+            self.output += '<a href="?number='+str(player.number)+'">'+player.name+'</a>'
+        return self.output

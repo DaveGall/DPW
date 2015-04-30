@@ -38,3 +38,33 @@ class MainPage(object):
         page = page.format(**locals())
         return page
 
+class ResultsPage(MainPage):
+    def __init__(self):
+        MainPage.__init__(self)
+        self.div_open = '<div method="GET">'
+        self.div_close = '</div>'
+        self.__links = []
+        self.place_stats = ''
+
+    @property
+    def links(self):
+        pass
+
+    @links.setter
+    def links(self, arr):
+        self.__links = arr
+        for item in arr:
+            self.place_stats += '<a href="?'+item[0]
+            try:
+                self.place_stats += '"name="'+item[0]+'">'+item[0]
+
+            except:
+                self.place_stats +='"</a>'
+
+        print self.place_stats
+
+    def print_out(self):
+        all = self.head+self.body+self.div_open+self.place_stats+self.div_close+self.close
+        all = all.format(**locals())
+        return all
+
