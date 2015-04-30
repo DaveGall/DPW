@@ -44,5 +44,15 @@ class Data(object):
         magic.position = 'Guard'
         magic.year_drafted = 1979
 
+        kobe = Lakers()
+        kobe.number = 24
+        kobe.name = 'Kobe Bryant'
+        kobe.game_average = 25.4
+        kobe.career_points = 32,482
+        kobe.position = 'Guard'
+        kobe.year_drafted = 1996
+
+        
+
 
 
