@@ -20,5 +20,14 @@ class Data(object):
         kareem.position = 'Center'
         kareem.year_drafted = 1976
 
-        
+        elgin = Lakers()
+        elgin.number = 22
+        elgin.name = 'Elgin Baylor'
+        elgin.game_average = 27.4
+        elgin.career_points = 23,149
+        elgin.position = 'Forward'
+        elgin.year_drafted = 1959
+
+        wilt = Lakers()
+
 
