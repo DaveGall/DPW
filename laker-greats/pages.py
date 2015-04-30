@@ -19,6 +19,11 @@ class MainPage(object):
              Coming from Minneapolis in 1960 they kept the Laker name and have had their great years and had some bad years,
              this season in particular. </p>
         </div>
+        <div>
+            <a href="?name=kobe">Kobe Bryant</a></br>
+            <a href="?name=shaq">Shaquille O'Neal</a></br>
+            <a href="?name=kareem">Kareem Abdul Jabbar</a></br>
+        </div>
         '''
         self.close = '''
     </body
