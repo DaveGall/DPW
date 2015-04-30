@@ -23,6 +23,9 @@ class MainPage(object):
             <a href="?name=kobe">Kobe Bryant</a></br>
             <a href="?name=shaq">Shaquille O'Neal</a></br>
             <a href="?name=kareem">Kareem Abdul Jabbar</a></br>
+            <a href="?name=elgin">Elgin Baylor</a></br>
+            <a href="?name=magic">Magic Johnson</a></br>
+            <a href="?name=wilt">Wilt Chamberlain</a></br>
         </div>
         '''
         self.close = '''
