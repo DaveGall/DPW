@@ -9,7 +9,7 @@ class MainHandler(webapp2.RequestHandler):
 
         p = FormPage()
         p.inputs = [['first_name', 'text','First Name'], ['last_name', 'text','Last Name'], ['Submit', 'submit']]
-        self.response.write(p.print_out_form())
+        self.response.write(p.print_out())
 
 
 class Page(object): #borrowing stuff from the object class
@@ -73,7 +73,8 @@ class FormPage(Page):
         print self._form_inputs
 
 
-    def print_out_form(self):
+    #Using polymorphism here - method overriding
+    def print_out(self):
         return self._head+self._body+self._form_open+self._form_inputs+self._form_close+self._close
 
 
