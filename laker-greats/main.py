@@ -12,14 +12,24 @@ from data import Lakers, Data
 class MainHandler(webapp2.RequestHandler):
     def get(self):
         p = ResultsPage()
+        l = Lakers()
         d = Data()
-        p.links = d.loop()
+
+        #p.links = d.loop()
+        #self.response.write(d.players)
+        #if l.number == 24:
+         #   self.request.GET(d.players[1])
+          #  self.response.write(l.name+str(l.number)+str(l.game_average)+str(l.career_points)+l.position)
+        #else:
+         #   self.response.write(p.print_out())
+
+
 
         #self.response.write(d.players[1])
         #p.body = d.loop()
         self.response.write(p.print_out())
         self.response.write(d.loop())
-        print p.links
+        #print p.links
 
 
 '''

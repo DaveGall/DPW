@@ -62,6 +62,9 @@ class Data(object):
 
         self.players = [kareem, elgin, wilt, magic, kobe, shaq]
 
+
+
+
     def loop(self):
         self.output = ''
         for player in self.players:
