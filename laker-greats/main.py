@@ -17,26 +17,18 @@ class MainHandler(webapp2.RequestHandler):
 
         if self.request.GET:
 
-            if self.request.GET('24'):
+            if l.number == '24':
                 self.response.write("Dave this is Kobe")
-            elif self.request.GET('32'):
+            elif l.number == '32':
                 self.response.write("Dave this is Magic")
+            elif l.number == '33':
+                self.response.write("Dave this is Kareem")
             else:
                 self.response.write(p.print_out())
-        #p.links = d.loop()
-        #self.response.write(d.players)
-        #if l.number == 24:
-         #   self.request.GET(d.players[1])
-          #  self.response.write(l.name+str(l.number)+str(l.game_average)+str(l.career_points)+l.position)
-        #else:
-         #   self.response.write(p.print_out())
 
 
-
-        #self.response.write(d.players[1])
-        #p.body = d.loop()
-        self.response.write(p.print_out())
-        self.response.write(d.loop())
+        #self.response.write(p.print_out())
+        #self.response.write(d.loop())
         #print p.links
 
 

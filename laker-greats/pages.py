@@ -44,24 +44,24 @@ class MainPage(object):
 class ResultsPage(MainPage):
     def __init__(self):
         MainPage.__init__(self)
-        self.div_open = '<ul>'
-        self.div_close = '</ul>'
+        self.div_open = '<div>'
+        self.div_close = '</div>'
         self.__links = []
         self.place_stats = ''
 
 
-    @property
-    def links(self):
-        pass
+   # @property
+    #def links(self):
+     #   pass
 
-    @links.setter
-    def links(self, arr):
-        self.__links = arr
-        for item in arr:
-            self.place_stats += '<p'+item[0]+'</p>'
+    #@links.setter
+    #def links(self, arr):
+     #   self.__links = arr
+      #  for item in arr:
+       #     self.place_stats += '<p'+item[0]+'</p>'
 
 
-        print self.place_stats
+#        print self.place_stats
 
 
     def print_out(self):
