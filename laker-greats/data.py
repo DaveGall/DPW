@@ -68,5 +68,5 @@ class Data(object):
     def loop(self):
         self.output = ''
         for player in self.players:
-            self.output += '<a href="?number='+str(player.number)+'">'+player.name+'</a><br/>'
+            self.output += '<a method="GET" href="?number='+str(player.number)+'">'+player.name+'</a><br/>'
         return self.output

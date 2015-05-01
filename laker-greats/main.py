@@ -15,6 +15,14 @@ class MainHandler(webapp2.RequestHandler):
         l = Lakers()
         d = Data()
 
+        if self.request.GET:
+
+            if self.request.GET('24'):
+                self.response.write("Dave this is Kobe")
+            elif self.request.GET('32'):
+                self.response.write("Dave this is Magic")
+            else:
+                self.response.write(p.print_out())
         #p.links = d.loop()
         #self.response.write(d.players)
         #if l.number == 24:
