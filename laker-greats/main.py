@@ -15,16 +15,23 @@ class MainHandler(webapp2.RequestHandler):
         l = Lakers()
         d = Data()
 
-        if self.request.GET:
 
-            if l.number == '24':
-                self.response.write("Dave this is Kobe")
-            elif l.number == '32':
-                self.response.write("Dave this is Magic")
-            elif l.number == '33':
-                self.response.write("Dave this is Kareem")
-            else:
-                self.response.write(p.print_out())
+
+        if l.number == '24':
+            k = self.response.write("Dave this is Kobe Bryant")
+            return k
+        elif l.number == '32':
+            self.response.write("Dave this is Magic")
+        elif l.number == '33':
+            self.response.write("Dave this is Kareem")
+        elif l.number == '22':
+            self.response.write("Dave this is Elgin Baylor")
+        elif l.number == '13':
+            self.response.write("Dave this is Wilt Chamberlain")
+        elif l.number == '34':
+            self.response.write("Dave this is Shaquille O'Neal")
+        else:
+            self.response.write(p.print_out())
 
 
         #self.response.write(p.print_out())
